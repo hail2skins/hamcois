@@ -10,13 +10,16 @@ $grayMediumLight: #eaeaea;
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 120px;
   background: #F7F7F7 url(pattern.png) fixed;
   padding-bottom: 40px;
 }
 
 /* header */
 
+.navbar .container {
+  min-height: 100px;
+}
 .brand {
   float: left;
   margin-right: 10px;
