@@ -1,17 +1,12 @@
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <h1>Hamco Internet <a href="#">Solutions</a></h1>
-        <div class="slogan">Database driven variable slogan!</div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="examples.html">Examples</a></li>
-          <li class="current"><a href="page.html">A Page</a></li>
-          <li><a href="another_page.html">Another Page</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+<header class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+     <div class="container">
+        <%= link_to "hamco internet solutions", root_path, class: 'brand' %>
+        <ul class="nav pull-right">
+          <li>
+          <%= link_to 'Sign up', '#' %>
+          </li>
         </ul>
       </div>
-    </div>
+  </nav>
+</header>

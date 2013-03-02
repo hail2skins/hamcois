@@ -4,49 +4,27 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title><%= full_title(yield(:title)) %></title>
    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Hamco Internet Solutions" %>">
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
    <%= csrf_meta_tags %>
    <%= render 'layouts/shim' %>
    <%= yield(:head) %>
    <meta name="keywords" content="website keywords, website keywords" />
    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
-</head>
-<body>
-  <%= render 'layouts/navigation' %>
-    <div id="site_content">
-      <div id="sidebar_container">
-        <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> </>
-        <div class="sidebar">
-        <!-- insert your sidebar items here -->
-        <h3>Latest News</h3>
-        <h4>What's the News?</h4>
-        <h5>1st July 2011</h5>
-        <p>Put your latest news item here, or anything else you would like in the sidebar!<br /><a href="#">Read more</a></p>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %>">
+    <%= render 'layouts/navigation' %>
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span12">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
         </div>
-        <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> </>
-        <div class="sidebar">
-          <h3>Newsletter</h3>
-          <p>If you would like to receive our newletter, please enter your email address and click 'Subscribe'.</p>
-          <form method="post" action="#" id="subscribe">
-            <p style="padding: 0 0 9px 0;"><input class="search" type="text" name="email_address" value="your email address" onclick="javascript: document.forms['subscribe'].email_address.value=''" /></p>
-            <p><input class="subscribe" name="subscribe" type="submit" value="Subscribe" /></p>
-          </form>
-        </div>
-        <img class="paperclip"<%= image_tag("paperclip.png", alt: "paperclip") %></>
-        <div class="sidebar">
-          <h3>Latest Blog</h3>
-          <h4>Website Goes Live</h4>
-          <h5>1st July 2011</h5>
-          <p>We have just launched our new website. Take a look around, we'd love to know what you think.....<br /><a href="#">read more</a></p>
-        </div>
-      </div>
-      <div id="content">
-		<%= yield %>
-	  </div>
-	  <%= render 'layouts/footer' %>
-
-</body>
+      <%= render 'layouts/footer' %>
+      <%= debug(assigns) if Rails.env.development? %>
+      </div> <!--! end of .container -->
+   </body>
 </html>
