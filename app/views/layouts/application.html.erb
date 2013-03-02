@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title><%= full_title(yield(:title)) %></title>
@@ -16,26 +15,10 @@
    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
 </head>
 <body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <h1>Hamco Internet <a href="#">Solutions</a></h1>
-        <div class="slogan">Database driven variable slogan!</div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="examples.html">Examples</a></li>
-          <li class="current"><a href="page.html">A Page</a></li>
-          <li><a href="another_page.html">Another Page</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
+  <%= render 'layouts/navigation' %>
     <div id="site_content">
       <div id="sidebar_container">
-        <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> />
+        <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> </>
         <div class="sidebar">
         <!-- insert your sidebar items here -->
         <h3>Latest News</h3>
@@ -43,7 +26,7 @@
         <h5>1st July 2011</h5>
         <p>Put your latest news item here, or anything else you would like in the sidebar!<br /><a href="#">Read more</a></p>
         </div>
-        <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> />
+        <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> </>
         <div class="sidebar">
           <h3>Newsletter</h3>
           <p>If you would like to receive our newletter, please enter your email address and click 'Subscribe'.</p>
@@ -52,7 +35,7 @@
             <p><input class="subscribe" name="subscribe" type="submit" value="Subscribe" /></p>
           </form>
         </div>
-        <img class="paperclip"<%= image_tag("paperclip.png", alt: "paperclip") %>/>
+        <img class="paperclip"<%= image_tag("paperclip.png", alt: "paperclip") %></>
         <div class="sidebar">
           <h3>Latest Blog</h3>
           <h4>Website Goes Live</h4>
