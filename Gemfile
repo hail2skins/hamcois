@@ -3,9 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 
-gem 'sqlite3', group: [:development, :test]
-
-gem 'pg', group: :production
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,7 +25,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
-gem 'thin', group: [:test, :development, :production]
+#gem 'thin', group: [:test, :development, :production]
 
 gem 'bootstrap-sass'
 
