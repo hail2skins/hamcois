@@ -20,7 +20,7 @@ development:
   database: hamcois_development
   pool: 5
   host: localhost
-  username: hamcois
+  username: vagrant
   password: password
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -50,14 +50,6 @@ test:
   database: hamcois_test
   pool: 5
   host: localhost
-  username: hamcois
+  username: vagrant
   password: password
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: hamcois_production
-  pool: 5
-  host: localhost
-  username: hamcois
-  password: C00l5tuff

@@ -25,11 +25,23 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.33)
+    annotate (2.5.0)
+      rake
     arel (4.0.0.beta1)
     atomic (1.0.1)
+    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
     builder (3.1.4)
+    capybara (2.1.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     coffee-rails (4.0.0.beta1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -37,9 +49,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.5.0)
+    diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
+    figaro (0.6.3)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     hike (1.2.1)
     i18n (0.6.4)
     jbuilder (1.0.2)
@@ -55,6 +76,8 @@ GEM
     mime-types (1.21)
     minitest (4.6.2)
     multi_json (1.6.1)
+    nokogiri (1.5.9)
+    nokogiri (1.5.9-x86-mingw32)
     pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
@@ -78,6 +101,17 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    rspec-rails (2.13.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
     sass (3.2.6)
     sass-rails (4.0.0.beta1)
       railties (>= 4.0.0.beta, < 5.0)
@@ -108,18 +142,27 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     will_paginate (3.0.4)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
   x86-mingw32
 
 DEPENDENCIES
+  annotate
+  bcrypt-ruby
   bootstrap-sass
+  bootstrap-will_paginate
+  capybara
   coffee-rails (~> 4.0.0.beta1)
+  factory_girl_rails
+  figaro
   jbuilder (~> 1.0.1)
   jquery-rails
   pg
   rails (= 4.0.0.beta1)
+  rspec-rails
   sass-rails (~> 4.0.0.beta1)
   simple_form
   turbolinks

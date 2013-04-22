@@ -27,14 +27,8 @@ gem 'jbuilder', '~> 1.0.1'
 
 #gem 'thin', group: [:test, :development, :production]
 
-gem 'bootstrap-sass'
-
-gem 'simple_form'
-
-gem 'will_paginate'
-
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -44,3 +38,20 @@ gem 'will_paginate'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'rspec-rails', group: [:development, :test]
+
+gem 'capybara', group: [:development, :test]
+
+gem 'factory_girl_rails', group: [:development, :test]
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+gem 'figaro'
+
+gem 'bootstrap-sass'
+
+gem 'annotate', group: :development
+
+gem 'simple_form'
