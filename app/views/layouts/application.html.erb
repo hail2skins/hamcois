@@ -14,20 +14,21 @@
    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
   </head>
-  <body class="<%= controller_name %> <%= action_name %>">
+  <body>
     <%= render 'layouts/navigation' %>
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span9">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span5 offset2">
+            <div id="site_content">
               <%= render 'layouts/messages' %>
               <%= yield %>
             </div>
-              <%= render 'layouts/sidebar' %>
           </div>
+            <%= render 'layouts/sidebar' %>
         </div>
+      </div>
       <%= render 'layouts/footer' %>
       <%= debug(assigns) if Rails.env.development? %>
-      </div> <!--! end of .container -->
+    
    </body>
 </html>
