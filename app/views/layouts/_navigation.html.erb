@@ -3,7 +3,6 @@
         <div class="span1 offset1">
           <ul class="nav nav-list pull-left">
             <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'Stuff', "#" %></li>
-            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'More Stuff', '#' %></li>
+            <li class="<%= 'active' if current_page?("/about") %>"><%= link_to 'About', "/about" %></li>
           </ul>
         </div>

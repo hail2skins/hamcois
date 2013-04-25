@@ -1,12 +1,14 @@
 Hamcois::Application.routes.draw do
   
-
   resources :slogans
 
-  resources :pages, except: :show
+  resources :pages, except: :show 
+ 
+
   root to: 'pages#show', id: 'home'
 
   get ':id', to: 'pages#show', as: :page
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
