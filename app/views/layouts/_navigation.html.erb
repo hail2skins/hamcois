@@ -1,25 +1,9 @@
-<header class="navbar navbar-fixed-top">
-  <nav class="navbar-inner">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span7 offset2">
-          <%= link_to "hamco internet solutions", root_path, class: 'brand' %>
-          <div class="span7">
-            <div class="slogan">Cool slogan goes here!</div>
-          </div>  
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span5 offset5">
-          <ul class="nav nav-tabs pull-right">
-            <li class="active"><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'Stuff', pages_path %></li>
-            <li><%= link_to 'More Stuff', '#' %></li>
+
+  
+        <div class="span1 offset1">
+          <ul class="nav nav-list pull-left">
+            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Stuff', "#" %></li>
+            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'More Stuff', '#' %></li>
           </ul>
         </div>
-      </div>
-    </div>
-  </nav>
-</header>

@@ -1,7 +1,9 @@
 Hamcois::Application.routes.draw do
   
 
-  resources :pages
+  resources :slogans
+
+  resources :pages, except: :show
   root to: 'pages#show', id: 'home'
 
   get ':id', to: 'pages#show', as: :page

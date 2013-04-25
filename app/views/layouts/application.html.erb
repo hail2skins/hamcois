@@ -15,10 +15,11 @@
    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
   </head>
   <body>
-    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/brand' %>
       <div class="container-fluid">
         <div class="row-fluid">
-          <div class="span5 offset2">
+          <%= render 'layouts/navigation' %>
+          <div class="span5">
             <div id="site_content">
               <%= render 'layouts/messages' %>
               <%= yield %>
