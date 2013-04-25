@@ -2,11 +2,14 @@
 <img class="paperclip" <%= image_tag("paperclip.png", alt: "paperclip") %> </>
 <div class="sidebar">
   <h3>Stuff I think</h3>
-  <h4><%= Article.first.title %></h4>
-  <h5><%= Article.first.created_at %></h5>
-  <p><%= sanitize Article.first.content.split[0..5].join(" ") %>...<br>
+  <% recent_articles %> 
+  <% @recent_articles.each do |article| %>
+  <h4><%= article.title %></h4>
+  <h5><%= article.created_at %></h5>
+  <p><%= article.content.split[0..5].join(" ") %>...<br>
   <a href="#">See More</a>
-  </p>  
+  </p>
+  <% end %> 
 </div>
 
 

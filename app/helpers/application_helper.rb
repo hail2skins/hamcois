@@ -20,4 +20,8 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+  def recent_articles
+    @recent_articles = Article.limit(3)
+  end
 end
