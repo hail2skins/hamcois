@@ -4,7 +4,7 @@
       <div class="row-fluid">
         <div class="span9 offset1">
           <%= link_to image_tag("TransHamco.png", alt: "Hamco Internet Solutions"), root_path, class: 'brand' %>
-          <div class='saying'><%= Slogan.order("RANDOM()").first.name %></div>
+          <div class='saying'><%= Slogan.count == 0 ? 'Testing?' : Slogan.order("RANDOM()").first.name %></div>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 Hamcois::Application.routes.draw do
   
+  resources :articles
+
   resources :slogans
 
   resources :pages, except: :show 
