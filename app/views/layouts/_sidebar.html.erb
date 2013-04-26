@@ -7,7 +7,7 @@
   <h4><%= article.title %></h4>
   <h5><%= article.created_at %></h5>
   <p><%= article.content.split[0..5].join(" ") %>...<br>
-  <a href="#">See More</a>
+  <%= link_to "See More", article %>
   </p>
   <% end %> 
 </div>
