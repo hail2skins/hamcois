@@ -1,5 +1,7 @@
 Hamcois::Application.routes.draw do
   
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   resources :articles
 
   resources :slogans
@@ -8,6 +10,11 @@ Hamcois::Application.routes.draw do
  
 
   root to: 'pages#show', id: 'home'
+
+  get '/signup', to: 'users#new'
+  get '/signin', to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'
+  put '/signin', to: 'sessions#new'
 
   get ':id', to: 'pages#show', as: :page
 
