@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user,    only: [:show, :edit, :update, :destroy]
-  before_action :correct_owner,     only: [:show, :edit, :update, :destroy]
+  #before_action :signed_in_user,    only: [:show, :edit, :update, :destroy]
+  before_action :correct_user,     only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -82,7 +82,7 @@ class UsersController < ApplicationController
       end      
     end
 
-    def correct_owner
-      redirect_to(root_path) unless current_user(@user)
+    def correct_user
+      @user = current_user
     end
 end
