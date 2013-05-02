@@ -1,15 +1,15 @@
-<%= simple_form_for(@article) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for(@article) do |f_form| %>
+  <%= f_form.error_notification %>
 
   <div class="inputs">
 
-    <%= f.input :title %>
+    <%= f_form.input :title %>
 
-    <%= f.input :content %>
+    <%= f_form.input :content %>
 
   </div>
 
   <div class="actions">
-    <%= f.button :submit %>
+    <%= f_form.button :submit %>
   </div>
 <% end %>
