@@ -1,6 +1,6 @@
 <div class="well well-small">
 	<p>
-		<b>Commenter:</b>
+		<b>Name:</b>
 		<%= comment.commenter %>
 	</p>
 
@@ -9,7 +9,9 @@
 		<%= comment.body %>
 	</p>
 </div>
-
+	
+	<% if signed_in? && current_user.admin? %>
  	<p>
   	<%= link_to 'Delete Comment', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: 'pull-right btn btn-mini btn-danger' %>
   </p>
+  <% end %>

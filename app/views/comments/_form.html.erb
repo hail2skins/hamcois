@@ -1,13 +1,8 @@
-<%= form_for([@article, @article.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :commenter %><br />
-    <%= f.text_field :commenter %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+<%= simple_form_for([@article, @article.comments.build]) do |f| %>
+  <% f.error_notification %>
+  <div class="form_inputs">
+    <%= f.input :commenter, label: 'Your name' %>
+    <%= f.input :body, label: 'Comment', placeholder: 'Tell us what you think about this article.' %>
+    <%= f.button :submit, class: 'btn-primary' %>
   </div>
 <% end %>
