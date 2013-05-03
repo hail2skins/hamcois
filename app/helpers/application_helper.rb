@@ -24,4 +24,12 @@ module ApplicationHelper
   def recent_articles
     @recent_articles = Article.limit(3)
   end
+
+  def american_date
+    to_date.strftime("%m-%d-%Y")
+  end
+
+  def hello_there
+    return "Hi Art"
+  end
 end
