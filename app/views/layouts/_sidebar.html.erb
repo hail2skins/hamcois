@@ -6,7 +6,7 @@
   <% @recent_articles.each do |article| %>
   <h4><%= article.title %></h4>
   <h5><%= article.created_at.to_date.strftime("%m-%d-%Y") %></h5>
-  <p><%= article.content.split[0..5].join(" ") %>...<br>
+  <p><%= article.content.split[0..15].join(" ") %>...<br>
   <%= link_to "See More", article %>
   </p>
   <% end %> 
@@ -20,7 +20,7 @@
   <h3>Stuff I like.</h3>
   <h4>Links to peek at.</h4>
   <h5>Some of these are worth reading.</h5>
-  <p>"Since I began my Rails journey, these sites, and many others, have proven invaluable."<br>
+  <p>We picked Ruby on Rails because of the amazing community.  Here are some places you could look if you're interested in starting.<br>
   <a href=http://rubyonrails.org>Rails</a><br>
   <a href=http://Railscasts.com>Railscasts</a><br>
   <a href=http://ruby.railstutorial.com>Rails Tutorial</a><br>

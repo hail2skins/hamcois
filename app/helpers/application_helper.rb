@@ -28,8 +28,4 @@ module ApplicationHelper
   def american_date
     to_date.strftime("%m-%d-%Y")
   end
-
-  def hello_there
-    return "Hi Art"
-  end
 end
