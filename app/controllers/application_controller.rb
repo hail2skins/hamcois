@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  before_action :authorize
+  #before_action :authorize
   
   delegate :allow?, to: :current_permission
   helper_method :allow?
