@@ -60,5 +60,5 @@ production:
   pool: 5
   host: localhost
   username: hamcois
-  password: Aw3s0m3s@us3
+  password: WHATEVER
 
