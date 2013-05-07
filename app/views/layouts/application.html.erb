@@ -30,6 +30,6 @@
       </div>
       <%= render 'layouts/footer' %>
       <%= debug(assigns) if Rails.env.development? %>
-    
+      <%= render 'layouts/googleanalytics' if Rails.env.production? %>
    </body>
 </html>
