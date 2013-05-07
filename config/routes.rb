@@ -18,7 +18,7 @@ Hamcois::Application.routes.draw do
   delete '/signout', to: 'sessions#destroy'
   put '/signin', to: 'sessions#new'
 
-  get ':id', to: 'pages#show', as: :page
+  get ':id', to: 'pages#show', as: :view
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
