@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 
-<%= simple_format @article.content %>
+<%= markdown(@article.content).html_safe %>
 
 <% if @article.comments.count > 0 %>
 <h2>Comments</h2>
