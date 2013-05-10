@@ -12,4 +12,10 @@
 
 class Comment < ActiveRecord::Base
   belongs_to :article
+
+  validates :commenter, :body, presence: true
+  #validates :commenter, format: { with: /\A[a-zA-Z]+\z/,
+  #  :message => "Only letters allowed" }
+  #validates :commenter, length: { in: 2..20 }
+  #validates :body, length: { in: 2..500 }
 end
