@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def recent_articles
-    @recent_articles = Article.order("created_at DESC").limit(3)
+    @recent_articles = Article.order("created_at DESC").limit(7)
   end
 
   def american_date
