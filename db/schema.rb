@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
     t.datetime "updated_at"
   end
 
-  add_index "articles", ["title"], name: "index_articles_on_title"
+  add_index "articles", ["title"], name: "index_articles_on_title", using: :btree
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+  add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree
 
   create_table "pages", force: true do |t|
     t.string   "name"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
     t.datetime "updated_at"
   end
 
-  add_index "pages", ["permalink"], name: "index_pages_on_permalink"
+  add_index "pages", ["permalink"], name: "index_pages_on_permalink", using: :btree
 
   create_table "slogans", force: true do |t|
     t.string   "name"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
     t.datetime "updated_at"
   end
 
-  add_index "slogans", ["name"], name: "index_slogans_on_name"
+  add_index "slogans", ["name"], name: "index_slogans_on_name", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
     t.boolean  "admin",           default: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email"
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
