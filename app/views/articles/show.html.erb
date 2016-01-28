@@ -2,7 +2,7 @@
 
 <%= markdown(@article.content).html_safe %>
 
-<% if @article.comments.count > 0 %>
+<% if @article.comments.any? %>
 <h2>Comments</h2>
 	<%= render @article.comments %>
 <% end %>

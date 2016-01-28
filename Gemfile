@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '5.0.0.beta1'
 
 gem 'pg'
 
@@ -14,7 +14,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
 
-  gem 'uglifier', '>= 1.3.0'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
@@ -58,7 +58,9 @@ gem 'bootstrap-sass'
 
 gem 'annotate', group: :development
 
-gem 'simple_form'
+gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
+
+gem "spring", group: :development
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
