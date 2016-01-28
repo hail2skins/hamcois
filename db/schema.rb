@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: true do |t|
+  create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
 
   add_index "articles", ["title"], name: "index_articles_on_title", using: :btree
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.string   "commenter"
     t.text     "body"
     t.integer  "article_id"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree
 
-  create_table "pages", force: true do |t|
+  create_table "pages", force: :cascade do |t|
     t.string   "name"
     t.string   "permalink"
     t.text     "content"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink", using: :btree
 
-  create_table "slogans", force: true do |t|
+  create_table "slogans", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20130502155211) do
 
   add_index "slogans", ["name"], name: "index_slogans_on_name", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"

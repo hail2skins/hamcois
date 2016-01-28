@@ -66,3 +66,5 @@ group :doc do
 end
 
 gem 'redcarpet'
+
+ruby "2.3.0"
