@@ -1,8 +1,12 @@
 
   
-        <div class="col-md-1">
-          <ul class="nav nav-pills pull-left">
-            <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
-            <li class="<%= 'active' if current_page?(articles_path) %>"><%= link_to 'Articles', articles_path %></li>
+        <div class="col-sm-1 col-sm-offset-1">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item">
+              <%= link_to 'Home', root_path, class: (current_page?(root_path) ? 'nav-link active' : 'nav-link') %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Articles', articles_path, class: (current_page?(articles_path) ? 'nav-link active' : 'nav-link') %>
+            </li>
           </ul>
         </div>

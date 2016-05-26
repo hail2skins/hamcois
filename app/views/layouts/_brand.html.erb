@@ -1,14 +1,12 @@
-<header class="navbar navbar-fixed-top">
-    <div class="container">
-      <div class="row">
-        <div class="navbar-header">
+<header class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header col-md-offset-1">
           <%= link_to image_tag("TransHamco.png", alt: "Hamco Internet Solutions"), root_path, class: 'brand' %>
         </div>
 
-        <div class="col-md-9 col-md-offset-1">
+        <div class="col-md-7 col-md-offset-1">
           <div class='saying'><%= Slogan.count == 0 ? 'Testing?' : Slogan.order("RANDOM()").first.name %></div>
         </div>
-      </div>
   </div>
-  </nav>
+
 </header>

@@ -11,22 +11,21 @@
    <%= yield(:head) %>
    <meta name="keywords" content="website keywords, website keywords" />
    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
-   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine" />
+
   </head>
   <body>
     <%= render 'layouts/brand' %>
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid">
           <%= render 'layouts/navigation' %>
-          <div class="col-md-7">
+          <div class="col-md-5">
             <div id="site_content">
               <%= render 'layouts/messages' %>
               <%= yield %>
             </div>
           </div>
             <%= render 'layouts/sidebar' %>
-        </div>
       </div>
       <%= render 'layouts/footer' %>
       <%= debug(assigns) if Rails.env.development? %>

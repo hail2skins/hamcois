@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.0.beta1'
+gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 
 gem 'pg'
 
@@ -28,7 +28,7 @@ gem 'jbuilder'
 #gem 'thin', group: :production
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 # Use unicorn as the app server
 gem 'unicorn'
@@ -54,7 +54,7 @@ gem 'bootstrap-will_paginate'
 
 gem 'figaro'
 
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 gem 'annotate', group: :development
 
