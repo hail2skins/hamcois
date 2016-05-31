@@ -69,4 +69,7 @@ end
 
 gem 'redcarpet'
 
+gem 'newrelic_rpm'
+gem 'puma'
+
 ruby "2.3.0"

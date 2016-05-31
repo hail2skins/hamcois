@@ -144,6 +144,7 @@ GEM
     net-ssh (3.1.1)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    newrelic_rpm (3.15.0.314)
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -151,6 +152,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
     pg (0.18.4-x86-mingw32)
+    puma (3.4.0)
     rack (2.0.0.rc1)
       json
     rack-test (0.6.3)
@@ -258,7 +260,9 @@ DEPENDENCIES
   figaro
   jbuilder
   jquery-rails
+  newrelic_rpm
   pg
+  puma
   rails (>= 5.0.0.rc1, < 5.1)
   redcarpet
   rspec-rails
